@@ -1,22 +1,15 @@
 /*
- *
  * Pedimos datos al usuario, y los mostramos en una ventana flotante.
- * 
  */
 package introduccion2;
 
 import javax.swing.JOptionPane;
 
 /**
- *
  * @author Fernández
- * 
  */
 public class Introduccion2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
 
         String cadena;

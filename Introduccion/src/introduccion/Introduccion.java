@@ -1,7 +1,5 @@
 /*
- * 
  * Calcula la media de las notas introducidas por el usuario.
- * 
  */
 package introduccion;
 
@@ -14,9 +12,7 @@ import java.util.Scanner;
  */
 public class Introduccion {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
        
         Scanner entrada = new Scanner(System.in);

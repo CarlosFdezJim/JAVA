@@ -8,15 +8,11 @@ package ejercicio2;
 import java.util.Scanner;
 
 /**
- *
  * @author Fernández
- * 
  */
 public class Ejercicio2 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         
@@ -24,7 +20,7 @@ public class Ejercicio2 {
         float salario = 0.0f;
         int total;
         
-        
+        //Pedimos los datos al usuario.
         
         System.out.println("Buenas Carlos, introduce las horas semanales que trabajas: ");
         horas = entrada.nextInt();
@@ -32,8 +28,10 @@ public class Ejercicio2 {
         System.out.println("Introduce el salario por hora que cobra usted: ");
         salario = entrada.nextFloat();
         
+        //Calculamos el salario mensuak.¡¡l.
         total = (int) (salario*horas);
         
+        //Devolvemos por pantalla el resultado.
         System.out.println("Tu salario mensual sería: "+total);
         
         
