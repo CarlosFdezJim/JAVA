@@ -121,23 +121,19 @@ public class Ventana extends JFrame{
         areaTexto.append("\nNombre: ");                             //Este método añade más texto.(no reemplaza).
         areaTexto.setEditable(true);                                //Editar el área de texto.
         
-        
         panel.add(areaTexto);
       */
      
         cajaTexto = new JTextField();
         cajaTexto.setBounds(30, 50, 300, 30);
         
-        
-        
         panel.add(cajaTexto);
-        
         
     }
     
     private void colocarBotones(){
         
-        /* BOTÓN TEXTO. */
+       /* BOTÓN TEXTO. */
       /*JButton boton1 = new JButton();                             //Creamos un botón.
         boton1.setText("Enviar");                                   //Establecemos un texto en el botón.
         boton1.setBounds(100, 100, 100, 40);                        //Establecemos la posición inicial y el tamaño de la etiqueta.

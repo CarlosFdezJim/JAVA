@@ -6,12 +6,13 @@ package Ventana;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.ButtonGroup;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -23,6 +24,7 @@ public class Ventana extends JFrame{
     private JButton boton;
     private JTextField cajaTexto;
     private JLabel saludo;
+    private JTextArea areaTexto;
     
     
     public Ventana(){
@@ -37,18 +39,29 @@ public class Ventana extends JFrame{
     }
     
     private void iniciarComponentes(){
+        
         colocarPaneles();
-        colocarEtiquetas();
+        colocarAreaTexto();
         colocarBotones();
-        colocarCajasTexto();
-    }    
+        
+      //colocarCajasTexto();
+      //colocarEtiquetas();
+    } 
+    
     private void colocarPaneles(){
         
         panel = new JPanel();                                       //Creación de un panel.
         panel.setLayout(null);                                      //Desactivamos el Layout del panel.
         this.getContentPane().add(panel);                           //Agregamos el panel a la ventana.
-        
       
+    }
+    
+    private void colocarAreaTexto(){
+        
+        areaTexto = new JTextArea();
+        areaTexto.setBounds(20, 20, 200, 300);
+        panel.add(areaTexto);
+        
     }
     
     private void colocarEtiquetas(){
@@ -65,8 +78,6 @@ public class Ventana extends JFrame{
         cajaTexto = new JTextField();
         cajaTexto.setBounds(30, 50, 300, 30);
         
-        cajaTexto.setText("Prueba");
-        
         panel.add(cajaTexto);
         
     }
@@ -74,7 +85,7 @@ public class Ventana extends JFrame{
     private void colocarBotones(){
         
         boton = new JButton("¡Pulsa aquí!");
-        boton.setBounds(150, 100, 150, 40);      
+        boton.setBounds(150, 350, 150, 40);      
         boton.setFont(new Font("Arial", 0, 15));
         
         panel.add(boton); 
@@ -85,8 +96,15 @@ public class Ventana extends JFrame{
 
         panel.add(saludo);
 
+        //eventoOyenteDeAccion();
+        eventoOyenteDeRaton();
+    }
+    
+    private void eventoOyenteDeAccion(){
+        
         //Agregando Evento de tipo ActionListener.
          ActionListener oyenteDeAccion = new ActionListener() {
+             
             @Override
             public void actionPerformed(ActionEvent e) {
                 saludo.setText("Hola "+cajaTexto.getText());
@@ -95,7 +113,38 @@ public class Ventana extends JFrame{
         };
          
           boton.addActionListener(oyenteDeAccion); 
+    }
+    
+    private void eventoOyenteDeRaton(){
+        //Agregando Evento de tipo MouseListener.
+        MouseListener oyenteRaton = new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                areaTexto.append("mouseClicked\n"); 
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                areaTexto.append("mousePressed\n");
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                areaTexto.append("mouseReleased\n");
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                areaTexto.append("mouseEntered\n");
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                areaTexto.append("mouseExited\n");
+            }
+        };
         
+        boton.addMouseListener(oyenteRaton);
     }
 
 }
