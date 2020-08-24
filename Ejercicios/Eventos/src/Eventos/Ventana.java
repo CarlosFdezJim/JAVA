@@ -1,14 +1,18 @@
 /*
  * Creación de ventanas en Java
  */
+
 package Ventana;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -25,7 +29,7 @@ public class Ventana extends JFrame{
     private JTextField cajaTexto;
     private JLabel saludo;
     private JTextArea areaTexto;
-    
+    private JComboBox listaDesplegable;
     
     public Ventana(){
 
@@ -41,12 +45,23 @@ public class Ventana extends JFrame{
     private void iniciarComponentes(){
         
         colocarPaneles();
-        colocarAreaTexto();
-        colocarBotones();
-        
+      //colocarAreaTexto();
+      //colocarBotones();
       //colocarCajasTexto();
       //colocarEtiquetas();
+        colocarListasDesplegables();
     } 
+    
+    private void colocarListasDesplegables(){
+        String [] paises = {"España", "Francia", "Italia","Portugal"};
+        
+        listaDesplegable = new JComboBox(paises);
+        listaDesplegable.setBounds(20, 20, 100, 30);
+        
+        listaDesplegable.addItem("Argentina");                  //Añadir objetos a tu lista desplegable.
+        listaDesplegable.setSelectedItem("Francia");                  //Seleccionar el primer objeto visto.
+        panel.add(listaDesplegable);
+    }
     
     private void colocarPaneles(){
         
@@ -59,7 +74,7 @@ public class Ventana extends JFrame{
     private void colocarAreaTexto(){
         
         areaTexto = new JTextArea();
-        areaTexto.setBounds(20, 20, 200, 300);
+        areaTexto.setBounds(230, 30, 200, 300);
         panel.add(areaTexto);
         
     }
@@ -76,9 +91,44 @@ public class Ventana extends JFrame{
     private void colocarCajasTexto(){
      
         cajaTexto = new JTextField();
-        cajaTexto.setBounds(30, 50, 300, 30);
+        cajaTexto.setBounds(20, 30, 150, 30);
         
         panel.add(cajaTexto);
+        
+        eventosDeTeclado();
+        
+    }
+    
+    private void eventosDeTeclado(){
+        
+        KeyListener eventoTeclado = new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+              //areaTexto.append("keyTyped\n");                     //Funcia sólo con caracteres UNICODE
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+              //areaTexto.append("KeyPress\n");
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+              //areaTexto.append("keyReleased\n");
+              if(e.getKeyChar()== 'p'){
+                  areaTexto.append("Letra p\n");
+              }
+              if(e.getKeyChar() == '\n'){
+                  areaTexto.append("ENTER\n");
+              }
+              if(e.getKeyChar() == ' '){
+                  areaTexto.append("ESPACIO\n");
+              }
+              
+            }
+        };
+        
+        cajaTexto.addKeyListener(eventoTeclado);
         
     }
     
@@ -96,8 +146,8 @@ public class Ventana extends JFrame{
 
         panel.add(saludo);
 
-        //eventoOyenteDeAccion();
-        eventoOyenteDeRaton();
+      //eventoOyenteDeAccion();
+      //eventoOyenteDeRaton();
     }
     
     private void eventoOyenteDeAccion(){
