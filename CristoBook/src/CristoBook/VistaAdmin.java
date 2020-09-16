@@ -27,103 +27,276 @@ public class VistaAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        TituloAdmin = new javax.swing.JLabel();
-        BotonCrearTablausuarios = new javax.swing.JButton();
-        BotonEliminarTablaUsuarios = new javax.swing.JButton();
-        BotonVer = new javax.swing.JButton();
-        BotonInsertar = new javax.swing.JButton();
-        BotonEliminar = new javax.swing.JButton();
+        jOptionPane1 = new javax.swing.JOptionPane();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
+        jLabelBuscarUsuario = new javax.swing.JLabel();
+        BuscarUsuario = new javax.swing.JLabel();
+        jPanelAdministrador2 = new javax.swing.JPanel();
+        jPanelAdministrador = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        Exit = new javax.swing.JLabel();
+        VerUsuarios = new javax.swing.JLabel();
+        jLabelVerUsuarios = new javax.swing.JLabel();
+        CrearUsuario = new javax.swing.JLabel();
+        jLabelCrearUsuario = new javax.swing.JLabel();
+        EliminarUsuario = new javax.swing.JLabel();
+        jLabelEliminarUsuario = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        CrearBD = new javax.swing.JLabel();
+        jLabelCrearBD = new javax.swing.JLabel();
+        VerBD = new javax.swing.JLabel();
+        jLabelVerBD = new javax.swing.JLabel();
+        EliminarBD = new javax.swing.JLabel();
+        jLabelEliminarBD = new javax.swing.JLabel();
+
+        jLabelBuscarUsuario.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        jLabelBuscarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelBuscarUsuario.setText("Buscar Usuarios");
+
+        BuscarUsuario.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
+        BuscarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        BuscarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_view_64px.png"))); // NOI18N
+        BuscarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 118, 108));
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(73, 181, 172));
-        jPanel1.setForeground(new java.awt.Color(38, 166, 154));
+        jPanelAdministrador2.setBackground(new java.awt.Color(47, 31, 99));
+        jPanelAdministrador2.setForeground(new java.awt.Color(160, 160, 160));
 
-        TituloAdmin.setFont(TituloAdmin.getFont().deriveFont(TituloAdmin.getFont().getStyle() | java.awt.Font.BOLD, TituloAdmin.getFont().getSize()+15));
-        TituloAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        TituloAdmin.setText("Administrador");
+        jPanelAdministrador.setBackground(new java.awt.Color(73, 181, 172));
 
-        BotonCrearTablausuarios.setText("Crear nueva TablaUsuarios");
-        BotonCrearTablausuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonCrearTablausuariosActionPerformed(evt);
+        jLabel1.setBackground(new java.awt.Color(73, 181, 172));
+        jLabel1.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Administrador");
+
+        javax.swing.GroupLayout jPanelAdministradorLayout = new javax.swing.GroupLayout(jPanelAdministrador);
+        jPanelAdministrador.setLayout(jPanelAdministradorLayout);
+        jPanelAdministradorLayout.setHorizontalGroup(
+            jPanelAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAdministradorLayout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanelAdministradorLayout.setVerticalGroup(
+            jPanelAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+        );
+
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_delete_30px.png"))); // NOI18N
+        Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ExitMouseClicked(evt);
             }
         });
 
-        BotonEliminarTablaUsuarios.setText("Eliminar TablaUsuarios");
+        VerUsuarios.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
+        VerUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        VerUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_view_details_64px.png"))); // NOI18N
+        VerUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        VerUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VerUsuariosMouseClicked(evt);
+            }
+        });
 
-        BotonVer.setText("Ver TablaUsuarios");
+        jLabelVerUsuarios.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        jLabelVerUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelVerUsuarios.setText("Ver Usuarios");
 
-        BotonInsertar.setText("Insertar Usuario en TablaUsuarios");
+        CrearUsuario.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
+        CrearUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        CrearUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_add_property_64px.png"))); // NOI18N
+        CrearUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CrearUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CrearUsuarioMouseClicked(evt);
+            }
+        });
 
-        BotonEliminar.setText("Eliminar Usuario de TablaUsuarios");
+        jLabelCrearUsuario.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        jLabelCrearUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCrearUsuario.setText("Crear Usuario");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(BotonCrearTablausuarios)
-                        .addGap(62, 62, 62))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(BotonEliminarTablaUsuarios)
-                        .addGap(86, 86, 86)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BotonEliminar)
-                    .addComponent(BotonInsertar))
-                .addGap(0, 90, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(BotonVer))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(177, 177, 177)
-                        .addComponent(TituloAdmin)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        EliminarUsuario.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
+        EliminarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        EliminarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_delete_bin_64px.png"))); // NOI18N
+        EliminarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabelEliminarUsuario.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        jLabelEliminarUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEliminarUsuario.setText("Eliminar Usuario");
+
+        CrearBD.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
+        CrearBD.setForeground(new java.awt.Color(255, 255, 255));
+        CrearBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CrearBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_add_database_64px.png"))); // NOI18N
+        CrearBD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        CrearBD.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CrearBDMouseClicked(evt);
+            }
+        });
+
+        jLabelCrearBD.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        jLabelCrearBD.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCrearBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelCrearBD.setText("Crear BD");
+
+        VerBD.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
+        VerBD.setForeground(new java.awt.Color(255, 255, 255));
+        VerBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        VerBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_database_64px.png"))); // NOI18N
+        VerBD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        VerBD.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                VerBDMouseClicked(evt);
+            }
+        });
+
+        jLabelVerBD.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        jLabelVerBD.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelVerBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVerBD.setText("Ver BD");
+
+        EliminarBD.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
+        EliminarBD.setForeground(new java.awt.Color(255, 255, 255));
+        EliminarBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EliminarBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_delete_database_64px.png"))); // NOI18N
+        EliminarBD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabelEliminarBD.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        jLabelEliminarBD.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEliminarBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelEliminarBD.setText("Eliminar BD");
+
+        javax.swing.GroupLayout jPanelAdministrador2Layout = new javax.swing.GroupLayout(jPanelAdministrador2);
+        jPanelAdministrador2.setLayout(jPanelAdministrador2Layout);
+        jPanelAdministrador2Layout.setHorizontalGroup(
+            jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jPanelAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Exit)
+                .addGap(31, 31, 31))
+            .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                            .addGap(77, 77, 77)
+                            .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabelCrearUsuario)
+                                .addComponent(CrearUsuario))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabelVerUsuarios)
+                                .addComponent(VerUsuarios))
+                            .addGap(72, 72, 72)
+                            .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(EliminarUsuario)
+                                .addComponent(jLabelEliminarUsuario))
+                            .addGap(30, 30, 30)))
+                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CrearBD)
+                            .addComponent(jLabelCrearBD))
+                        .addGap(109, 109, 109)
+                        .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(VerBD)
+                            .addComponent(jLabelVerBD))
+                        .addGap(100, 100, 100)
+                        .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(EliminarBD)
+                            .addComponent(jLabelEliminarBD))))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(TituloAdmin)
-                .addGap(137, 137, 137)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BotonCrearTablausuarios)
-                    .addComponent(BotonInsertar))
+        jPanelAdministrador2Layout.setVerticalGroup(
+            jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(80, 80, 80)
+                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                        .addComponent(EliminarUsuario)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabelEliminarUsuario))
+                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                        .addComponent(CrearUsuario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelCrearUsuario))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAdministrador2Layout.createSequentialGroup()
+                        .addComponent(VerUsuarios)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabelVerUsuarios)))
+                .addGap(46, 46, 46)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BotonEliminarTablaUsuarios)
-                    .addComponent(BotonEliminar))
-                .addGap(18, 18, 18)
-                .addComponent(BotonVer)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                            .addComponent(VerBD)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabelVerBD)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                            .addComponent(EliminarBD)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jLabelEliminarBD)))
+                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
+                        .addComponent(CrearBD)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelCrearBD)))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanelAdministrador2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanelAdministrador2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotonCrearTablausuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCrearTablausuariosActionPerformed
-        TablaUsuario tu = new TablaUsuario();
-    }//GEN-LAST:event_BotonCrearTablausuariosActionPerformed
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_ExitMouseClicked
+
+    private void CrearBDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearBDMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CrearBDMouseClicked
+
+    private void VerBDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerBDMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_VerBDMouseClicked
+
+    private void VerUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VerUsuariosMouseClicked
+        
+    }//GEN-LAST:event_VerUsuariosMouseClicked
+
+    private void CrearUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearUsuarioMouseClicked
+        CrearUsuario usu = new CrearUsuario();
+        usu.setVisible(true);
+        dispose();
+        
+    }//GEN-LAST:event_CrearUsuarioMouseClicked
 
     /**
      * @param args the command line arguments
@@ -161,12 +334,26 @@ public class VistaAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonCrearTablausuarios;
-    private javax.swing.JButton BotonEliminar;
-    private javax.swing.JButton BotonEliminarTablaUsuarios;
-    private javax.swing.JButton BotonInsertar;
-    private javax.swing.JButton BotonVer;
-    private javax.swing.JLabel TituloAdmin;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel BuscarUsuario;
+    private javax.swing.JLabel CrearBD;
+    private javax.swing.JLabel CrearUsuario;
+    private javax.swing.JLabel EliminarBD;
+    private javax.swing.JLabel EliminarUsuario;
+    private javax.swing.JLabel Exit;
+    private javax.swing.JLabel VerBD;
+    private javax.swing.JLabel VerUsuarios;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelBuscarUsuario;
+    private javax.swing.JLabel jLabelCrearBD;
+    private javax.swing.JLabel jLabelCrearUsuario;
+    private javax.swing.JLabel jLabelEliminarBD;
+    private javax.swing.JLabel jLabelEliminarUsuario;
+    private javax.swing.JLabel jLabelVerBD;
+    private javax.swing.JLabel jLabelVerUsuarios;
+    private javax.swing.JOptionPane jOptionPane1;
+    private javax.swing.JPanel jPanelAdministrador;
+    private javax.swing.JPanel jPanelAdministrador2;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

@@ -64,7 +64,7 @@ public class Usuario {
         
         //Imprimimos el usuario con todos sus miembros.
                System.out.println("Login: " +getLogin());
-               System.out.println("\"Nombre: " +getNombre());
+               System.out.println("Nombre: " +getNombre());
                System.out.println("Apellido: " +getApellido());
                System.out.println("Perfil de usuarios: " +getPerfil_usuario());
                System.out.println("--------------------------");

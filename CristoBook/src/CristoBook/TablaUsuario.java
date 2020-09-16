@@ -6,7 +6,7 @@ package CristoBook;
  */
 
 public final class TablaUsuario {
-    Usuario[] bdUsuario = new Usuario[this.totalTuplas];
+    Usuario[] bdUsuario = new Usuario[10];
     private int totalTuplas;
     
     public TablaUsuario(){
@@ -18,9 +18,8 @@ public final class TablaUsuario {
     }
     
     public void printbdUsuario(){
-        for(int i=0; i< getTotalTuplas();i++){
+        for(int i=0; i < this.getTotalTuplas();i++){
             bdUsuario[i].printUsuario();
-            
         }
     }
     
@@ -41,12 +40,19 @@ public final class TablaUsuario {
     public void bdUsuario(){
         
         Usuario Carlos = new Usuario("CarlosCristoRey","Carlos","Fernández","Admin");
+        bdUsuario[0] = Carlos;
         Usuario Cristian = new Usuario("CristianCristoRey","Cristian","Campos","Admin");
+        bdUsuario[1] = Cristian;
         Usuario Jaime = new Usuario("JaimeCristorey","Jaime","Cabeza","Admin");
+        bdUsuario[2] = Jaime;
         Usuario David = new Usuario("DavidCristoRey","David","Lopez","Admin");
+        bdUsuario[3] = David;
         Usuario Pablo = new Usuario("PabloCristoRey","Pablo","García","Admin");
+        bdUsuario[4] = Pablo;
         
-       //bdUsuario[0].printUsuario();
+        
+        //printbdUsuario();
+        
         
     }
 
