@@ -34,8 +34,8 @@ public class InicioSesion extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         PanelIzq = new javax.swing.JPanel();
-        LogoNombre = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         PanelDrch = new javax.swing.JPanel();
         IniciarSesion = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -56,34 +56,36 @@ public class InicioSesion extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelIzq.setBackground(new java.awt.Color(73, 181, 172));
-
-        LogoNombre.setFont(new java.awt.Font("Gabriola", 0, 48)); // NOI18N
-        LogoNombre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Login/Portada.png"))); // NOI18N
+        PanelIzq.setBackground(new java.awt.Color(64, 170, 173));
 
         logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Login/logo.png"))); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Modeka", 1, 75)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("CristoBook");
 
         javax.swing.GroupLayout PanelIzqLayout = new javax.swing.GroupLayout(PanelIzq);
         PanelIzq.setLayout(PanelIzqLayout);
         PanelIzqLayout.setHorizontalGroup(
             PanelIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelIzqLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LogoNombre)
-                .addGap(31, 31, 31))
             .addGroup(PanelIzqLayout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addComponent(logo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(PanelIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelIzqLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel1))
+                    .addGroup(PanelIzqLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(logo)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         PanelIzqLayout.setVerticalGroup(
             PanelIzqLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelIzqLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(LogoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64)
+                .addGap(78, 78, 78)
+                .addComponent(jLabel1)
+                .addGap(75, 75, 75)
                 .addComponent(logo)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         getContentPane().add(PanelIzq, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, 600));
@@ -162,6 +164,7 @@ public class InicioSesion extends javax.swing.JFrame {
         jLabelregistroAqui.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelregistroAqui.setForeground(new java.awt.Color(255, 255, 255));
         jLabelregistroAqui.setText("aquí");
+        jLabelregistroAqui.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabelregistroAqui.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabelregistroAquiMouseClicked(evt);
@@ -170,7 +173,7 @@ public class InicioSesion extends javax.swing.JFrame {
 
         jLabelRegistro.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
         jLabelRegistro.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelRegistro.setText("¿No tienes cuenta?, Reguistrate");
+        jLabelRegistro.setText("¿No tienes cuenta? Registrate");
 
         javax.swing.GroupLayout PanelDrchLayout = new javax.swing.GroupLayout(PanelDrch);
         PanelDrch.setLayout(PanelDrchLayout);
@@ -238,9 +241,9 @@ public class InicioSesion extends javax.swing.JFrame {
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(14, 14, 14)
                 .addComponent(bttIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelDrchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelregistroAqui))
@@ -335,13 +338,13 @@ public class InicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel IconLock;
     private javax.swing.JLabel IconPass;
     private javax.swing.JLabel IniciarSesion;
-    private javax.swing.JLabel LogoNombre;
     private javax.swing.JPanel PanelDrch;
     private javax.swing.JPanel PanelIzq;
     private javax.swing.JLabel Pass;
     private javax.swing.JButton bttIniciarSesion;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelRegistro;
     private javax.swing.JLabel jLabelregistroAqui;

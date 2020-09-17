@@ -36,7 +36,7 @@ public class VistaNormal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(73, 181, 172));
+        jPanel1.setBackground(new java.awt.Color(64, 170, 173));
         jPanel1.setForeground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+15));

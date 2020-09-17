@@ -34,7 +34,6 @@ public class VistaAdmin extends javax.swing.JFrame {
         jPanelAdministrador2 = new javax.swing.JPanel();
         jPanelAdministrador = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        Exit = new javax.swing.JLabel();
         VerUsuarios = new javax.swing.JLabel();
         jLabelVerUsuarios = new javax.swing.JLabel();
         CrearUsuario = new javax.swing.JLabel();
@@ -48,6 +47,7 @@ public class VistaAdmin extends javax.swing.JFrame {
         jLabelVerBD = new javax.swing.JLabel();
         EliminarBD = new javax.swing.JLabel();
         jLabelEliminarBD = new javax.swing.JLabel();
+        Exit1 = new javax.swing.JLabel();
 
         jLabelBuscarUsuario.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelBuscarUsuario.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,6 +64,7 @@ public class VistaAdmin extends javax.swing.JFrame {
 
         jPanelAdministrador2.setBackground(new java.awt.Color(47, 31, 99));
         jPanelAdministrador2.setForeground(new java.awt.Color(160, 160, 160));
+        jPanelAdministrador2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelAdministrador.setBackground(new java.awt.Color(73, 181, 172));
 
@@ -77,207 +78,131 @@ public class VistaAdmin extends javax.swing.JFrame {
         jPanelAdministrador.setLayout(jPanelAdministradorLayout);
         jPanelAdministradorLayout.setHorizontalGroup(
             jPanelAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAdministradorLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
         );
         jPanelAdministradorLayout.setVerticalGroup(
             jPanelAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
-        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_delete_30px.png"))); // NOI18N
-        Exit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExitMouseClicked(evt);
-            }
-        });
+        jPanelAdministrador2.add(jPanelAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 21, 140, 60));
 
         VerUsuarios.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
         VerUsuarios.setForeground(new java.awt.Color(255, 255, 255));
-        VerUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_view_details_64px.png"))); // NOI18N
+        VerUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_find_user_male_30px.png"))); // NOI18N
         VerUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VerUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VerUsuariosMouseClicked(evt);
             }
         });
+        jPanelAdministrador2.add(VerUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, -1, -1));
 
         jLabelVerUsuarios.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelVerUsuarios.setForeground(new java.awt.Color(255, 255, 255));
         jLabelVerUsuarios.setText("Ver Usuarios");
+        jPanelAdministrador2.add(jLabelVerUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, -1));
 
         CrearUsuario.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
         CrearUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        CrearUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_add_property_64px.png"))); // NOI18N
+        CrearUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_add_user_male_30px_2.png"))); // NOI18N
         CrearUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         CrearUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CrearUsuarioMouseClicked(evt);
             }
         });
+        jPanelAdministrador2.add(CrearUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, -1, -1));
 
         jLabelCrearUsuario.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelCrearUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCrearUsuario.setText("Crear Usuario");
+        jPanelAdministrador2.add(jLabelCrearUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, -1, -1));
 
         EliminarUsuario.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
         EliminarUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        EliminarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_delete_bin_64px.png"))); // NOI18N
+        EliminarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_denied_30px.png"))); // NOI18N
         EliminarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanelAdministrador2.add(EliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
 
         jLabelEliminarUsuario.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelEliminarUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEliminarUsuario.setText("Eliminar Usuario");
+        jPanelAdministrador2.add(jLabelEliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, -1, -1));
+        jPanelAdministrador2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 450, 10));
 
         CrearBD.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
         CrearBD.setForeground(new java.awt.Color(255, 255, 255));
         CrearBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CrearBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_add_database_64px.png"))); // NOI18N
+        CrearBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_add_database_30px.png"))); // NOI18N
         CrearBD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         CrearBD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CrearBDMouseClicked(evt);
             }
         });
+        jPanelAdministrador2.add(CrearBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
 
         jLabelCrearBD.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelCrearBD.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCrearBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelCrearBD.setText("Crear BD");
+        jPanelAdministrador2.add(jLabelCrearBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 350, -1, -1));
 
         VerBD.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
         VerBD.setForeground(new java.awt.Color(255, 255, 255));
         VerBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        VerBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_database_64px.png"))); // NOI18N
+        VerBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_database_administrator_30px.png"))); // NOI18N
         VerBD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VerBD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 VerBDMouseClicked(evt);
             }
         });
+        jPanelAdministrador2.add(VerBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, -1, -1));
 
         jLabelVerBD.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelVerBD.setForeground(new java.awt.Color(255, 255, 255));
         jLabelVerBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelVerBD.setText("Ver BD");
+        jPanelAdministrador2.add(jLabelVerBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, -1, -1));
 
         EliminarBD.setFont(new java.awt.Font("Gotham", 1, 14)); // NOI18N
         EliminarBD.setForeground(new java.awt.Color(255, 255, 255));
         EliminarBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EliminarBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8_delete_database_64px.png"))); // NOI18N
+        EliminarBD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/VistaAdmin/icons8_delete_database_30px.png"))); // NOI18N
         EliminarBD.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanelAdministrador2.add(EliminarBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 300, -1, -1));
 
         jLabelEliminarBD.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         jLabelEliminarBD.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEliminarBD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelEliminarBD.setText("Eliminar BD");
+        jPanelAdministrador2.add(jLabelEliminarBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, -1, -1));
 
-        javax.swing.GroupLayout jPanelAdministrador2Layout = new javax.swing.GroupLayout(jPanelAdministrador2);
-        jPanelAdministrador2.setLayout(jPanelAdministrador2Layout);
-        jPanelAdministrador2Layout.setHorizontalGroup(
-            jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jPanelAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Exit)
-                .addGap(31, 31, 31))
-            .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                            .addGap(77, 77, 77)
-                            .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabelCrearUsuario)
-                                .addComponent(CrearUsuario))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabelVerUsuarios)
-                                .addComponent(VerUsuarios))
-                            .addGap(72, 72, 72)
-                            .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(EliminarUsuario)
-                                .addComponent(jLabelEliminarUsuario))
-                            .addGap(30, 30, 30)))
-                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(CrearBD)
-                            .addComponent(jLabelCrearBD))
-                        .addGap(109, 109, 109)
-                        .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(VerBD)
-                            .addComponent(jLabelVerBD))
-                        .addGap(100, 100, 100)
-                        .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EliminarBD)
-                            .addComponent(jLabelEliminarBD))))
-                .addContainerGap(117, Short.MAX_VALUE))
-        );
-        jPanelAdministrador2Layout.setVerticalGroup(
-            jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelAdministrador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Exit, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(80, 80, 80)
-                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                        .addComponent(EliminarUsuario)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelEliminarUsuario))
-                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                        .addComponent(CrearUsuario)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelCrearUsuario))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelAdministrador2Layout.createSequentialGroup()
-                        .addComponent(VerUsuarios)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelVerUsuarios)))
-                .addGap(46, 46, 46)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelAdministrador2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                            .addComponent(VerBD)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jLabelVerBD)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                            .addComponent(EliminarBD)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jLabelEliminarBD)))
-                    .addGroup(jPanelAdministrador2Layout.createSequentialGroup()
-                        .addComponent(CrearBD)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabelCrearBD)))
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
+        Exit1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Login/icons8_delete_24px.png"))); // NOI18N
+        Exit1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Exit1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Exit1MouseClicked(evt);
+            }
+        });
+        jPanelAdministrador2.add(Exit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelAdministrador2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelAdministrador2, javax.swing.GroupLayout.PREFERRED_SIZE, 673, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelAdministrador2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelAdministrador2, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_ExitMouseClicked
 
     private void CrearBDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearBDMouseClicked
         // TODO add your handling code here:
@@ -297,6 +222,10 @@ public class VistaAdmin extends javax.swing.JFrame {
         dispose();
         
     }//GEN-LAST:event_CrearUsuarioMouseClicked
+
+    private void Exit1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Exit1MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_Exit1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -339,7 +268,7 @@ public class VistaAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel CrearUsuario;
     private javax.swing.JLabel EliminarBD;
     private javax.swing.JLabel EliminarUsuario;
-    private javax.swing.JLabel Exit;
+    private javax.swing.JLabel Exit1;
     private javax.swing.JLabel VerBD;
     private javax.swing.JLabel VerUsuarios;
     private javax.swing.Box.Filler filler1;
